@@ -1,9 +1,19 @@
-variable "vm" {}
+variable "project" {
+  description = "Project short code for resource naming"
+}
 
-variable "location" {}
+variable "tags" {
+  description = "Project tags"
+}
 
-variable "network" {}
+variable "location" {
+  description = "Project Location"
+}
 
-variable "project" {}
+variable "vm" {
+  description = "VM Parameters"
+}
 
-variable "tags" {}
+variable "network" {
+  description = "Project Network parameters"
+}

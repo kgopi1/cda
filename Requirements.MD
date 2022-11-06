@@ -27,6 +27,8 @@ Using your favourite configuration management tool and cloud provider, implement
 Network only allows secured HTTP access from the outside. ***
 
 ***NSG rules created to allow only the https ports ***
+CheckOV Rule: 
+Ensure that HTTP (port 80) access is restricted from the internet" : Passed
 
 Versioning, audit trails are enabled on file/object stores ****
 

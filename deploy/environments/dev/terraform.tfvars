@@ -17,7 +17,7 @@ vm = {
 network = {
   vnet_address   = "10.0.1.0/24"
   subnet_address = "10.0.1.32/28"
-  source_ip      = "82.33.88.114"
+  source_ip      = ""
 }
 
 
