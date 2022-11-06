@@ -1,0 +1,3755 @@
+{
+    "check_type": "terraform",
+    "results": {
+        "passed_checks": [
+            {
+                "check_id": "CKV_AZURE_9",
+                "bc_check_id": "BC_AZR_NETWORKING_2",
+                "check_name": "Ensure that RDP access is restricted from the internet",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        15,
+                        "resource \"azurerm_network_security_group\" \"vmnsg\" {\n"
+                    ],
+                    [
+                        16,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        17,
+                        "  name                = \"${var.project}-vm-nsg\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    15,
+                    19
+                ],
+                "resource": "azurerm_network_security_group.vmnsg",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleRDPAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/bc_azr_networking_2",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_77",
+                "bc_check_id": "BC_AZR_NETWORKING_22",
+                "check_name": "Ensure that UDP Services are restricted from the Internet ",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        15,
+                        "resource \"azurerm_network_security_group\" \"vmnsg\" {\n"
+                    ],
+                    [
+                        16,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        17,
+                        "  name                = \"${var.project}-vm-nsg\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    15,
+                    19
+                ],
+                "resource": "azurerm_network_security_group.vmnsg",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleUDPAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-udp-services-are-restricted-from-the-internet",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_160",
+                "bc_check_id": "BC_AZR_NETWORKING_57",
+                "check_name": "Ensure that HTTP (port 80) access is restricted from the internet",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        15,
+                        "resource \"azurerm_network_security_group\" \"vmnsg\" {\n"
+                    ],
+                    [
+                        16,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        17,
+                        "  name                = \"${var.project}-vm-nsg\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    15,
+                    19
+                ],
+                "resource": "azurerm_network_security_group.vmnsg",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleHTTPAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-azure-http-port-80-access-from-the-internet-is-restricted",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_10",
+                "bc_check_id": "BC_AZR_NETWORKING_3",
+                "check_name": "Ensure that SSH access is restricted from the internet",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        15,
+                        "resource \"azurerm_network_security_group\" \"vmnsg\" {\n"
+                    ],
+                    [
+                        16,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        17,
+                        "  name                = \"${var.project}-vm-nsg\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    15,
+                    19
+                ],
+                "resource": "azurerm_network_security_group.vmnsg",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleSSHAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/bc_azr_networking_3",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_9",
+                "bc_check_id": "BC_AZR_NETWORKING_2",
+                "check_name": "Ensure that RDP access is restricted from the internet",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        28,
+                        "resource \"azurerm_network_security_rule\" \"vminbound\" {\n"
+                    ],
+                    [
+                        29,
+                        "  access                      = \"Allow\"\n"
+                    ],
+                    [
+                        30,
+                        "  direction                   = \"Inbound\"\n"
+                    ],
+                    [
+                        31,
+                        "  name                        = \"AL-IN-HTTPS\"\n"
+                    ],
+                    [
+                        32,
+                        "  network_security_group_name = azurerm_network_security_group.vmnsg.name\n"
+                    ],
+                    [
+                        33,
+                        "  priority                    = 101\n"
+                    ],
+                    [
+                        34,
+                        "  protocol                    = \"Tcp\"\n"
+                    ],
+                    [
+                        35,
+                        "  resource_group_name         = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        36,
+                        "  destination_address_prefix = \"${var.vmsubnet}\"\n"
+                    ],
+                    [
+                        37,
+                        "  destination_port_range = \"443\"\n"
+                    ],
+                    [
+                        38,
+                        "  source_address_prefix = \"82.33.88.114\"\n"
+                    ],
+                    [
+                        39,
+                        "  source_port_range = \"*\"\n"
+                    ],
+                    [
+                        40,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    28,
+                    40
+                ],
+                "resource": "azurerm_network_security_rule.vminbound",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleRDPAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/bc_azr_networking_2",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "network_security_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_network_security_group.vmnsg",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_77",
+                "bc_check_id": "BC_AZR_NETWORKING_22",
+                "check_name": "Ensure that UDP Services are restricted from the Internet ",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        28,
+                        "resource \"azurerm_network_security_rule\" \"vminbound\" {\n"
+                    ],
+                    [
+                        29,
+                        "  access                      = \"Allow\"\n"
+                    ],
+                    [
+                        30,
+                        "  direction                   = \"Inbound\"\n"
+                    ],
+                    [
+                        31,
+                        "  name                        = \"AL-IN-HTTPS\"\n"
+                    ],
+                    [
+                        32,
+                        "  network_security_group_name = azurerm_network_security_group.vmnsg.name\n"
+                    ],
+                    [
+                        33,
+                        "  priority                    = 101\n"
+                    ],
+                    [
+                        34,
+                        "  protocol                    = \"Tcp\"\n"
+                    ],
+                    [
+                        35,
+                        "  resource_group_name         = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        36,
+                        "  destination_address_prefix = \"${var.vmsubnet}\"\n"
+                    ],
+                    [
+                        37,
+                        "  destination_port_range = \"443\"\n"
+                    ],
+                    [
+                        38,
+                        "  source_address_prefix = \"82.33.88.114\"\n"
+                    ],
+                    [
+                        39,
+                        "  source_port_range = \"*\"\n"
+                    ],
+                    [
+                        40,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    28,
+                    40
+                ],
+                "resource": "azurerm_network_security_rule.vminbound",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleUDPAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-udp-services-are-restricted-from-the-internet",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "network_security_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_network_security_group.vmnsg",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_160",
+                "bc_check_id": "BC_AZR_NETWORKING_57",
+                "check_name": "Ensure that HTTP (port 80) access is restricted from the internet",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        28,
+                        "resource \"azurerm_network_security_rule\" \"vminbound\" {\n"
+                    ],
+                    [
+                        29,
+                        "  access                      = \"Allow\"\n"
+                    ],
+                    [
+                        30,
+                        "  direction                   = \"Inbound\"\n"
+                    ],
+                    [
+                        31,
+                        "  name                        = \"AL-IN-HTTPS\"\n"
+                    ],
+                    [
+                        32,
+                        "  network_security_group_name = azurerm_network_security_group.vmnsg.name\n"
+                    ],
+                    [
+                        33,
+                        "  priority                    = 101\n"
+                    ],
+                    [
+                        34,
+                        "  protocol                    = \"Tcp\"\n"
+                    ],
+                    [
+                        35,
+                        "  resource_group_name         = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        36,
+                        "  destination_address_prefix = \"${var.vmsubnet}\"\n"
+                    ],
+                    [
+                        37,
+                        "  destination_port_range = \"443\"\n"
+                    ],
+                    [
+                        38,
+                        "  source_address_prefix = \"82.33.88.114\"\n"
+                    ],
+                    [
+                        39,
+                        "  source_port_range = \"*\"\n"
+                    ],
+                    [
+                        40,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    28,
+                    40
+                ],
+                "resource": "azurerm_network_security_rule.vminbound",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleHTTPAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-azure-http-port-80-access-from-the-internet-is-restricted",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "network_security_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_network_security_group.vmnsg",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_10",
+                "bc_check_id": "BC_AZR_NETWORKING_3",
+                "check_name": "Ensure that SSH access is restricted from the internet",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        28,
+                        "resource \"azurerm_network_security_rule\" \"vminbound\" {\n"
+                    ],
+                    [
+                        29,
+                        "  access                      = \"Allow\"\n"
+                    ],
+                    [
+                        30,
+                        "  direction                   = \"Inbound\"\n"
+                    ],
+                    [
+                        31,
+                        "  name                        = \"AL-IN-HTTPS\"\n"
+                    ],
+                    [
+                        32,
+                        "  network_security_group_name = azurerm_network_security_group.vmnsg.name\n"
+                    ],
+                    [
+                        33,
+                        "  priority                    = 101\n"
+                    ],
+                    [
+                        34,
+                        "  protocol                    = \"Tcp\"\n"
+                    ],
+                    [
+                        35,
+                        "  resource_group_name         = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        36,
+                        "  destination_address_prefix = \"${var.vmsubnet}\"\n"
+                    ],
+                    [
+                        37,
+                        "  destination_port_range = \"443\"\n"
+                    ],
+                    [
+                        38,
+                        "  source_address_prefix = \"82.33.88.114\"\n"
+                    ],
+                    [
+                        39,
+                        "  source_port_range = \"*\"\n"
+                    ],
+                    [
+                        40,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    28,
+                    40
+                ],
+                "resource": "azurerm_network_security_rule.vminbound",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleSSHAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/bc_azr_networking_3",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "network_security_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_network_security_group.vmnsg",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_9",
+                "bc_check_id": "BC_AZR_NETWORKING_2",
+                "check_name": "Ensure that RDP access is restricted from the internet",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        44,
+                        "resource \"azurerm_network_security_rule\" \"inbound-ssh\" {\n"
+                    ],
+                    [
+                        45,
+                        "  access                      = \"Allow\"\n"
+                    ],
+                    [
+                        46,
+                        "  direction                   = \"Inbound\"\n"
+                    ],
+                    [
+                        47,
+                        "  name                        = \"AL-IN-SSH\"\n"
+                    ],
+                    [
+                        48,
+                        "  network_security_group_name = azurerm_network_security_group.vmnsg.name\n"
+                    ],
+                    [
+                        49,
+                        "  priority                    = 102\n"
+                    ],
+                    [
+                        50,
+                        "  protocol                    = \"Tcp\"\n"
+                    ],
+                    [
+                        51,
+                        "  resource_group_name         = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        52,
+                        "  destination_address_prefix = \"${var.vmsubnet}\"\n"
+                    ],
+                    [
+                        53,
+                        "  destination_port_range = \"22\"\n"
+                    ],
+                    [
+                        54,
+                        "  source_address_prefix = \"82.33.88.114\"\n"
+                    ],
+                    [
+                        55,
+                        "  source_port_range = \"*\"\n"
+                    ],
+                    [
+                        56,
+                        "}"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    44,
+                    56
+                ],
+                "resource": "azurerm_network_security_rule.inbound-ssh",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleRDPAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/bc_azr_networking_2",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "network_security_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_network_security_group.vmnsg",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_77",
+                "bc_check_id": "BC_AZR_NETWORKING_22",
+                "check_name": "Ensure that UDP Services are restricted from the Internet ",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        44,
+                        "resource \"azurerm_network_security_rule\" \"inbound-ssh\" {\n"
+                    ],
+                    [
+                        45,
+                        "  access                      = \"Allow\"\n"
+                    ],
+                    [
+                        46,
+                        "  direction                   = \"Inbound\"\n"
+                    ],
+                    [
+                        47,
+                        "  name                        = \"AL-IN-SSH\"\n"
+                    ],
+                    [
+                        48,
+                        "  network_security_group_name = azurerm_network_security_group.vmnsg.name\n"
+                    ],
+                    [
+                        49,
+                        "  priority                    = 102\n"
+                    ],
+                    [
+                        50,
+                        "  protocol                    = \"Tcp\"\n"
+                    ],
+                    [
+                        51,
+                        "  resource_group_name         = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        52,
+                        "  destination_address_prefix = \"${var.vmsubnet}\"\n"
+                    ],
+                    [
+                        53,
+                        "  destination_port_range = \"22\"\n"
+                    ],
+                    [
+                        54,
+                        "  source_address_prefix = \"82.33.88.114\"\n"
+                    ],
+                    [
+                        55,
+                        "  source_port_range = \"*\"\n"
+                    ],
+                    [
+                        56,
+                        "}"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    44,
+                    56
+                ],
+                "resource": "azurerm_network_security_rule.inbound-ssh",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleUDPAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-udp-services-are-restricted-from-the-internet",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "network_security_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_network_security_group.vmnsg",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_160",
+                "bc_check_id": "BC_AZR_NETWORKING_57",
+                "check_name": "Ensure that HTTP (port 80) access is restricted from the internet",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        44,
+                        "resource \"azurerm_network_security_rule\" \"inbound-ssh\" {\n"
+                    ],
+                    [
+                        45,
+                        "  access                      = \"Allow\"\n"
+                    ],
+                    [
+                        46,
+                        "  direction                   = \"Inbound\"\n"
+                    ],
+                    [
+                        47,
+                        "  name                        = \"AL-IN-SSH\"\n"
+                    ],
+                    [
+                        48,
+                        "  network_security_group_name = azurerm_network_security_group.vmnsg.name\n"
+                    ],
+                    [
+                        49,
+                        "  priority                    = 102\n"
+                    ],
+                    [
+                        50,
+                        "  protocol                    = \"Tcp\"\n"
+                    ],
+                    [
+                        51,
+                        "  resource_group_name         = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        52,
+                        "  destination_address_prefix = \"${var.vmsubnet}\"\n"
+                    ],
+                    [
+                        53,
+                        "  destination_port_range = \"22\"\n"
+                    ],
+                    [
+                        54,
+                        "  source_address_prefix = \"82.33.88.114\"\n"
+                    ],
+                    [
+                        55,
+                        "  source_port_range = \"*\"\n"
+                    ],
+                    [
+                        56,
+                        "}"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    44,
+                    56
+                ],
+                "resource": "azurerm_network_security_rule.inbound-ssh",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleHTTPAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-azure-http-port-80-access-from-the-internet-is-restricted",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "network_security_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_network_security_group.vmnsg",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_10",
+                "bc_check_id": "BC_AZR_NETWORKING_3",
+                "check_name": "Ensure that SSH access is restricted from the internet",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        44,
+                        "resource \"azurerm_network_security_rule\" \"inbound-ssh\" {\n"
+                    ],
+                    [
+                        45,
+                        "  access                      = \"Allow\"\n"
+                    ],
+                    [
+                        46,
+                        "  direction                   = \"Inbound\"\n"
+                    ],
+                    [
+                        47,
+                        "  name                        = \"AL-IN-SSH\"\n"
+                    ],
+                    [
+                        48,
+                        "  network_security_group_name = azurerm_network_security_group.vmnsg.name\n"
+                    ],
+                    [
+                        49,
+                        "  priority                    = 102\n"
+                    ],
+                    [
+                        50,
+                        "  protocol                    = \"Tcp\"\n"
+                    ],
+                    [
+                        51,
+                        "  resource_group_name         = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        52,
+                        "  destination_address_prefix = \"${var.vmsubnet}\"\n"
+                    ],
+                    [
+                        53,
+                        "  destination_port_range = \"22\"\n"
+                    ],
+                    [
+                        54,
+                        "  source_address_prefix = \"82.33.88.114\"\n"
+                    ],
+                    [
+                        55,
+                        "  source_port_range = \"*\"\n"
+                    ],
+                    [
+                        56,
+                        "}"
+                    ]
+                ],
+                "file_path": "/cda/network.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                "repo_file_path": "/deploy/modules/cda/network.tf",
+                "file_line_range": [
+                    44,
+                    56
+                ],
+                "resource": "azurerm_network_security_rule.inbound-ssh",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NSGRuleSSHAccessRestricted",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/bc_azr_networking_3",
+                "details": [],
+                "breadcrumbs": {
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "network_security_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_network_security_group.vmnsg",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/network.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_3",
+                "bc_check_id": "BC_AZR_GENERAL_85",
+                "check_name": "Ensure that 'Secure transfer required' is set to 'Enabled'",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "enable_https_traffic_only"
+                    ]
+                },
+                "code_block": [
+                    [
+                        12,
+                        "resource \"azurerm_storage_account\" \"storageacct\" {\n"
+                    ],
+                    [
+                        13,
+                        "  account_replication_type = \"LRS\"\n"
+                    ],
+                    [
+                        14,
+                        "  account_tier             = \"Standard\"\n"
+                    ],
+                    [
+                        15,
+                        "  location                 = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        16,
+                        "  name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        17,
+                        "  #name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name      = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "  enable_https_traffic_only = true\n"
+                    ],
+                    [
+                        20,
+                        "  blob_properties {\n"
+                    ],
+                    [
+                        21,
+                        "    versioning_enabled = true\n"
+                    ],
+                    [
+                        22,
+                        "  }\n"
+                    ],
+                    [
+                        23,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    12,
+                    23
+                ],
+                "resource": "azurerm_storage_account.storageacct",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.StorageAccountsTransportEncryption",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-azure-secure-transfer-required-feature-is-set-to-enabled",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_59",
+                "bc_check_id": "BC_AZR_NETWORKING_18",
+                "check_name": "Ensure that Storage accounts disallow public access",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "allow_blob_public_access"
+                    ]
+                },
+                "code_block": [
+                    [
+                        12,
+                        "resource \"azurerm_storage_account\" \"storageacct\" {\n"
+                    ],
+                    [
+                        13,
+                        "  account_replication_type = \"LRS\"\n"
+                    ],
+                    [
+                        14,
+                        "  account_tier             = \"Standard\"\n"
+                    ],
+                    [
+                        15,
+                        "  location                 = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        16,
+                        "  name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        17,
+                        "  #name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name      = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "  enable_https_traffic_only = true\n"
+                    ],
+                    [
+                        20,
+                        "  blob_properties {\n"
+                    ],
+                    [
+                        21,
+                        "    versioning_enabled = true\n"
+                    ],
+                    [
+                        22,
+                        "  }\n"
+                    ],
+                    [
+                        23,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    12,
+                    23
+                ],
+                "resource": "azurerm_storage_account.storageacct",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.StorageAccountDisablePublicAccess",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-storage-accounts-disallow-public-access",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_36",
+                "bc_check_id": "BC_AZR_NETWORKING_16",
+                "check_name": "Ensure 'Trusted Microsoft Services' is enabled for Storage Account access",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        12,
+                        "resource \"azurerm_storage_account\" \"storageacct\" {\n"
+                    ],
+                    [
+                        13,
+                        "  account_replication_type = \"LRS\"\n"
+                    ],
+                    [
+                        14,
+                        "  account_tier             = \"Standard\"\n"
+                    ],
+                    [
+                        15,
+                        "  location                 = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        16,
+                        "  name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        17,
+                        "  #name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name      = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "  enable_https_traffic_only = true\n"
+                    ],
+                    [
+                        20,
+                        "  blob_properties {\n"
+                    ],
+                    [
+                        21,
+                        "    versioning_enabled = true\n"
+                    ],
+                    [
+                        22,
+                        "  }\n"
+                    ],
+                    [
+                        23,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    12,
+                    23
+                ],
+                "resource": "azurerm_storage_account.storageacct",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.StorageAccountAzureServicesAccessEnabled",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/enable-trusted-microsoft-services-for-storage-account-access",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_60",
+                "bc_check_id": "BC_AZR_NETWORKING_19",
+                "check_name": "Ensure that storage account enables secure transfer",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "enable_https_traffic_only"
+                    ]
+                },
+                "code_block": [
+                    [
+                        12,
+                        "resource \"azurerm_storage_account\" \"storageacct\" {\n"
+                    ],
+                    [
+                        13,
+                        "  account_replication_type = \"LRS\"\n"
+                    ],
+                    [
+                        14,
+                        "  account_tier             = \"Standard\"\n"
+                    ],
+                    [
+                        15,
+                        "  location                 = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        16,
+                        "  name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        17,
+                        "  #name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name      = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "  enable_https_traffic_only = true\n"
+                    ],
+                    [
+                        20,
+                        "  blob_properties {\n"
+                    ],
+                    [
+                        21,
+                        "    versioning_enabled = true\n"
+                    ],
+                    [
+                        22,
+                        "  }\n"
+                    ],
+                    [
+                        23,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    12,
+                    23
+                ],
+                "resource": "azurerm_storage_account.storageacct",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.StorageAccountEnablesSecureTransfer",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-storage-account-enables-secure-transfer",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_34",
+                "bc_check_id": "BC_AZR_NETWORKING_14",
+                "check_name": "Ensure that 'Public access level' is set to Private for blob containers",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "container_access_type/[0]"
+                    ]
+                },
+                "code_block": [
+                    [
+                        25,
+                        "resource \"azurerm_storage_container\" \"scripts\" {\n"
+                    ],
+                    [
+                        26,
+                        "  name                 = \"scripts\"\n"
+                    ],
+                    [
+                        27,
+                        "  storage_account_name = azurerm_storage_account.storageacct.name\n"
+                    ],
+                    [
+                        28,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    25,
+                    28
+                ],
+                "resource": "azurerm_storage_container.scripts",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.StorageBlobServiceContainerPrivateAccess",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/set-public-access-level-to-private-for-blob-containers",
+                "details": [],
+                "breadcrumbs": {
+                    "storage_account_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_storage_account.storageacct",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_118",
+                "bc_check_id": "BC_AZR_NETWORKING_35",
+                "check_name": "Ensure that Network Interfaces disable IP forwarding",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "enable_ip_forwarding"
+                    ]
+                },
+                "code_block": [
+                    [
+                        1,
+                        "resource \"azurerm_network_interface\" \"vmnic\" {\n"
+                    ],
+                    [
+                        2,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        3,
+                        "  name                = \"${var.project}-vm-nic\"\n"
+                    ],
+                    [
+                        4,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        5,
+                        "  ip_configuration {\n"
+                    ],
+                    [
+                        6,
+                        "    name                          = \"vm-nic\"\n"
+                    ],
+                    [
+                        7,
+                        "    private_ip_address_allocation = \"Dynamic\"\n"
+                    ],
+                    [
+                        8,
+                        "    subnet_id = azurerm_subnet.vmsubnet.id\n"
+                    ],
+                    [
+                        9,
+                        "    public_ip_address_id = azurerm_public_ip.vmpip.id\n"
+                    ],
+                    [
+                        10,
+                        "  }\n"
+                    ],
+                    [
+                        11,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vm.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vm.tf",
+                "repo_file_path": "/deploy/modules/cda/vm.tf",
+                "file_line_range": [
+                    1,
+                    11
+                ],
+                "resource": "azurerm_network_interface.vmnic",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.NetworkInterfaceEnableIPForwarding",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-network-interfaces-disable-ip-forwarding",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_92",
+                "bc_check_id": "BC_AZR_GENERAL_66",
+                "check_name": "Ensure that Virtual Machines use managed disks",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        19,
+                        "resource \"azurerm_linux_virtual_machine\" \"vm\" {\n"
+                    ],
+                    [
+                        20,
+                        "  admin_username        = \"vmadmin\"\n"
+                    ],
+                    [
+                        21,
+                        "  admin_password = azurerm_key_vault_secret.vmpassword.value\n"
+                    ],
+                    [
+                        22,
+                        "  disable_password_authentication = false\n"
+                    ],
+                    [
+                        23,
+                        "  #zone = var.vm.zone\n"
+                    ],
+                    [
+                        24,
+                        "  location              = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        25,
+                        "  tags = var.tags\n"
+                    ],
+                    [
+                        26,
+                        "  name                  = \"${var.project}-webserver-${var.vm.zone}\"\n"
+                    ],
+                    [
+                        27,
+                        "  network_interface_ids = [azurerm_network_interface.vmnic.id]\n"
+                    ],
+                    [
+                        28,
+                        "  resource_group_name   = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        29,
+                        "  size                  = var.vm.size\n"
+                    ],
+                    [
+                        30,
+                        "  computer_name = \"${var.project}-webserver-${var.vm.zone}\"\n"
+                    ],
+                    [
+                        31,
+                        "\n"
+                    ],
+                    [
+                        32,
+                        "  boot_diagnostics {\n"
+                    ],
+                    [
+                        33,
+                        "    storage_account_uri = azurerm_storage_account.storageacct.primary_blob_endpoint\n"
+                    ],
+                    [
+                        34,
+                        "  }\n"
+                    ],
+                    [
+                        35,
+                        "  os_disk {\n"
+                    ],
+                    [
+                        36,
+                        "    caching              = \"ReadWrite\"\n"
+                    ],
+                    [
+                        37,
+                        "    storage_account_type = \"Standard_LRS\"\n"
+                    ],
+                    [
+                        38,
+                        "    name = \"${var.project}-webserver-osdisk-amd\"\n"
+                    ],
+                    [
+                        39,
+                        "  }\n"
+                    ],
+                    [
+                        40,
+                        "  source_image_reference {\n"
+                    ],
+                    [
+                        41,
+                        "    publisher = var.vm.source_image_reference.publisher\n"
+                    ],
+                    [
+                        42,
+                        "    offer     = var.vm.source_image_reference.offer\n"
+                    ],
+                    [
+                        43,
+                        "    sku       =var.vm.source_image_reference.sku\n"
+                    ],
+                    [
+                        44,
+                        "    version   = var.vm.source_image_reference.version\n"
+                    ],
+                    [
+                        45,
+                        "  }\n"
+                    ],
+                    [
+                        46,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vm.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vm.tf",
+                "repo_file_path": "/deploy/modules/cda/vm.tf",
+                "file_line_range": [
+                    19,
+                    46
+                ],
+                "resource": "azurerm_linux_virtual_machine.vm",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.VMStorageOsDisk",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-virtual-machines-use-managed-disks",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "admin_password": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_key_vault_secret.vmpassword",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_111",
+                "bc_check_id": "BC_AZR_GENERAL_41",
+                "check_name": "Ensure that key vault enables soft delete",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "soft_delete_enabled"
+                    ]
+                },
+                "code_block": [
+                    [
+                        1,
+                        "resource \"azurerm_key_vault\" \"keyvault\" {\n"
+                    ],
+                    [
+                        2,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        3,
+                        "  name                = \"${var.project}-kv\"\n"
+                    ],
+                    [
+                        4,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        5,
+                        "  sku_name            = \"standard\"\n"
+                    ],
+                    [
+                        6,
+                        "  tenant_id           = data.azurerm_subscription.sub.tenant_id\n"
+                    ],
+                    [
+                        7,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vmdeps.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                "repo_file_path": "/deploy/modules/cda/vmdeps.tf",
+                "file_line_range": [
+                    1,
+                    7
+                ],
+                "resource": "azurerm_key_vault.keyvault",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.KeyVaultEnablesSoftDelete",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-key-vault-enables-soft-delete",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV2_AZURE_8",
+                "bc_check_id": "BC_AZR_LOGGING_12",
+                "check_name": "Ensure the storage container storing the activity logs is not publicly accessible",
+                "check_result": {
+                    "result": "PASSED",
+                    "entity": {
+                        "azurerm_storage_container": {
+                            "scripts": {
+                                "__end_line__": 28,
+                                "__start_line__": 25,
+                                "name": [
+                                    "scripts"
+                                ],
+                                "storage_account_name": [
+                                    "${var.project}${random_string.sastring.result}sa"
+                                ]
+                            }
+                        }
+                    },
+                    "evaluated_keys": [
+                        "resource_type",
+                        "enabled",
+                        "container_access_type"
+                    ]
+                },
+                "code_block": [
+                    [
+                        25,
+                        "resource \"azurerm_storage_container\" \"scripts\" {\n"
+                    ],
+                    [
+                        26,
+                        "  name                 = \"scripts\"\n"
+                    ],
+                    [
+                        27,
+                        "  storage_account_name = azurerm_storage_account.storageacct.name\n"
+                    ],
+                    [
+                        28,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    25,
+                    28
+                ],
+                "resource": "azurerm_storage_container.scripts",
+                "evaluations": null,
+                "check_class": "checkov.common.graph.checks_infra.base_check",
+                "fixed_definition": null,
+                "entity_tags": {},
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-the-storage-container-storing-the-activity-logs-is-not-publicly-accessible",
+                "details": [],
+                "breadcrumbs": {
+                    "storage_account_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_storage_account.storageacct",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            }
+        ],
+        "failed_checks": [
+            {
+                "check_id": "CKV_AZURE_35",
+                "bc_check_id": "BC_AZR_NETWORKING_15",
+                "check_name": "Ensure default network access rule for Storage Accounts is set to deny",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": []
+                },
+                "code_block": [
+                    [
+                        12,
+                        "resource \"azurerm_storage_account\" \"storageacct\" {\n"
+                    ],
+                    [
+                        13,
+                        "  account_replication_type = \"LRS\"\n"
+                    ],
+                    [
+                        14,
+                        "  account_tier             = \"Standard\"\n"
+                    ],
+                    [
+                        15,
+                        "  location                 = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        16,
+                        "  name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        17,
+                        "  #name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name      = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "  enable_https_traffic_only = true\n"
+                    ],
+                    [
+                        20,
+                        "  blob_properties {\n"
+                    ],
+                    [
+                        21,
+                        "    versioning_enabled = true\n"
+                    ],
+                    [
+                        22,
+                        "  }\n"
+                    ],
+                    [
+                        23,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    12,
+                    23
+                ],
+                "resource": "azurerm_storage_account.storageacct",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.StorageAccountDefaultNetworkAccessDeny",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/set-default-network-access-rule-for-storage-accounts-to-deny",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_33",
+                "bc_check_id": "BC_AZR_LOGGING_4",
+                "check_name": "Ensure Storage logging is enabled for Queue service for read, write and delete requests",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "account_kind"
+                    ]
+                },
+                "code_block": [
+                    [
+                        12,
+                        "resource \"azurerm_storage_account\" \"storageacct\" {\n"
+                    ],
+                    [
+                        13,
+                        "  account_replication_type = \"LRS\"\n"
+                    ],
+                    [
+                        14,
+                        "  account_tier             = \"Standard\"\n"
+                    ],
+                    [
+                        15,
+                        "  location                 = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        16,
+                        "  name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        17,
+                        "  #name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name      = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "  enable_https_traffic_only = true\n"
+                    ],
+                    [
+                        20,
+                        "  blob_properties {\n"
+                    ],
+                    [
+                        21,
+                        "    versioning_enabled = true\n"
+                    ],
+                    [
+                        22,
+                        "  }\n"
+                    ],
+                    [
+                        23,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    12,
+                    23
+                ],
+                "resource": "azurerm_storage_account.storageacct",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.StorageAccountLoggingQueueServiceEnabled",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/enable-requests-on-storage-logging-for-queue-service",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_44",
+                "bc_check_id": "BC_AZR_STORAGE_2",
+                "check_name": "Ensure Storage Account is using the latest version of TLS encryption",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "min_tls_version"
+                    ]
+                },
+                "code_block": [
+                    [
+                        12,
+                        "resource \"azurerm_storage_account\" \"storageacct\" {\n"
+                    ],
+                    [
+                        13,
+                        "  account_replication_type = \"LRS\"\n"
+                    ],
+                    [
+                        14,
+                        "  account_tier             = \"Standard\"\n"
+                    ],
+                    [
+                        15,
+                        "  location                 = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        16,
+                        "  name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        17,
+                        "  #name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name      = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "  enable_https_traffic_only = true\n"
+                    ],
+                    [
+                        20,
+                        "  blob_properties {\n"
+                    ],
+                    [
+                        21,
+                        "    versioning_enabled = true\n"
+                    ],
+                    [
+                        22,
+                        "  }\n"
+                    ],
+                    [
+                        23,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    12,
+                    23
+                ],
+                "resource": "azurerm_storage_account.storageacct",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.StorageAccountMinimumTlsVersion",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/bc_azr_storage_2",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_50",
+                "bc_check_id": "BC_AZR_GENERAL_14",
+                "check_name": "Ensure Virtual Machine Extensions are not Installed",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "allow_extension_operations"
+                    ]
+                },
+                "code_block": [
+                    [
+                        19,
+                        "resource \"azurerm_linux_virtual_machine\" \"vm\" {\n"
+                    ],
+                    [
+                        20,
+                        "  admin_username        = \"vmadmin\"\n"
+                    ],
+                    [
+                        21,
+                        "  admin_password = azurerm_key_vault_secret.vmpassword.value\n"
+                    ],
+                    [
+                        22,
+                        "  disable_password_authentication = false\n"
+                    ],
+                    [
+                        23,
+                        "  #zone = var.vm.zone\n"
+                    ],
+                    [
+                        24,
+                        "  location              = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        25,
+                        "  tags = var.tags\n"
+                    ],
+                    [
+                        26,
+                        "  name                  = \"${var.project}-webserver-${var.vm.zone}\"\n"
+                    ],
+                    [
+                        27,
+                        "  network_interface_ids = [azurerm_network_interface.vmnic.id]\n"
+                    ],
+                    [
+                        28,
+                        "  resource_group_name   = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        29,
+                        "  size                  = var.vm.size\n"
+                    ],
+                    [
+                        30,
+                        "  computer_name = \"${var.project}-webserver-${var.vm.zone}\"\n"
+                    ],
+                    [
+                        31,
+                        "\n"
+                    ],
+                    [
+                        32,
+                        "  boot_diagnostics {\n"
+                    ],
+                    [
+                        33,
+                        "    storage_account_uri = azurerm_storage_account.storageacct.primary_blob_endpoint\n"
+                    ],
+                    [
+                        34,
+                        "  }\n"
+                    ],
+                    [
+                        35,
+                        "  os_disk {\n"
+                    ],
+                    [
+                        36,
+                        "    caching              = \"ReadWrite\"\n"
+                    ],
+                    [
+                        37,
+                        "    storage_account_type = \"Standard_LRS\"\n"
+                    ],
+                    [
+                        38,
+                        "    name = \"${var.project}-webserver-osdisk-amd\"\n"
+                    ],
+                    [
+                        39,
+                        "  }\n"
+                    ],
+                    [
+                        40,
+                        "  source_image_reference {\n"
+                    ],
+                    [
+                        41,
+                        "    publisher = var.vm.source_image_reference.publisher\n"
+                    ],
+                    [
+                        42,
+                        "    offer     = var.vm.source_image_reference.offer\n"
+                    ],
+                    [
+                        43,
+                        "    sku       =var.vm.source_image_reference.sku\n"
+                    ],
+                    [
+                        44,
+                        "    version   = var.vm.source_image_reference.version\n"
+                    ],
+                    [
+                        45,
+                        "  }\n"
+                    ],
+                    [
+                        46,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vm.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vm.tf",
+                "repo_file_path": "/deploy/modules/cda/vm.tf",
+                "file_line_range": [
+                    19,
+                    46
+                ],
+                "resource": "azurerm_linux_virtual_machine.vm",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.AzureInstanceExtensions",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/bc_azr_general_14",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "admin_password": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_key_vault_secret.vmpassword",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_1",
+                "bc_check_id": "BC_AZR_NETWORKING_1",
+                "check_name": "Ensure Azure Instance does not use basic authentication(Use SSH Key Instead)",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "disable_password_authentication"
+                    ]
+                },
+                "code_block": [
+                    [
+                        19,
+                        "resource \"azurerm_linux_virtual_machine\" \"vm\" {\n"
+                    ],
+                    [
+                        20,
+                        "  admin_username        = \"vmadmin\"\n"
+                    ],
+                    [
+                        21,
+                        "  admin_password = azurerm_key_vault_secret.vmpassword.value\n"
+                    ],
+                    [
+                        22,
+                        "  disable_password_authentication = false\n"
+                    ],
+                    [
+                        23,
+                        "  #zone = var.vm.zone\n"
+                    ],
+                    [
+                        24,
+                        "  location              = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        25,
+                        "  tags = var.tags\n"
+                    ],
+                    [
+                        26,
+                        "  name                  = \"${var.project}-webserver-${var.vm.zone}\"\n"
+                    ],
+                    [
+                        27,
+                        "  network_interface_ids = [azurerm_network_interface.vmnic.id]\n"
+                    ],
+                    [
+                        28,
+                        "  resource_group_name   = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        29,
+                        "  size                  = var.vm.size\n"
+                    ],
+                    [
+                        30,
+                        "  computer_name = \"${var.project}-webserver-${var.vm.zone}\"\n"
+                    ],
+                    [
+                        31,
+                        "\n"
+                    ],
+                    [
+                        32,
+                        "  boot_diagnostics {\n"
+                    ],
+                    [
+                        33,
+                        "    storage_account_uri = azurerm_storage_account.storageacct.primary_blob_endpoint\n"
+                    ],
+                    [
+                        34,
+                        "  }\n"
+                    ],
+                    [
+                        35,
+                        "  os_disk {\n"
+                    ],
+                    [
+                        36,
+                        "    caching              = \"ReadWrite\"\n"
+                    ],
+                    [
+                        37,
+                        "    storage_account_type = \"Standard_LRS\"\n"
+                    ],
+                    [
+                        38,
+                        "    name = \"${var.project}-webserver-osdisk-amd\"\n"
+                    ],
+                    [
+                        39,
+                        "  }\n"
+                    ],
+                    [
+                        40,
+                        "  source_image_reference {\n"
+                    ],
+                    [
+                        41,
+                        "    publisher = var.vm.source_image_reference.publisher\n"
+                    ],
+                    [
+                        42,
+                        "    offer     = var.vm.source_image_reference.offer\n"
+                    ],
+                    [
+                        43,
+                        "    sku       =var.vm.source_image_reference.sku\n"
+                    ],
+                    [
+                        44,
+                        "    version   = var.vm.source_image_reference.version\n"
+                    ],
+                    [
+                        45,
+                        "  }\n"
+                    ],
+                    [
+                        46,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vm.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vm.tf",
+                "repo_file_path": "/deploy/modules/cda/vm.tf",
+                "file_line_range": [
+                    19,
+                    46
+                ],
+                "resource": "azurerm_linux_virtual_machine.vm",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.AzureInstancePassword",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/bc_azr_networking_1",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "admin_password": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_key_vault_secret.vmpassword",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_149",
+                "bc_check_id": "BC_AZR_GENERAL_84",
+                "check_name": "Ensure that Virtual machine does not enable password authentication",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "disable_password_authentication"
+                    ]
+                },
+                "code_block": [
+                    [
+                        19,
+                        "resource \"azurerm_linux_virtual_machine\" \"vm\" {\n"
+                    ],
+                    [
+                        20,
+                        "  admin_username        = \"vmadmin\"\n"
+                    ],
+                    [
+                        21,
+                        "  admin_password = azurerm_key_vault_secret.vmpassword.value\n"
+                    ],
+                    [
+                        22,
+                        "  disable_password_authentication = false\n"
+                    ],
+                    [
+                        23,
+                        "  #zone = var.vm.zone\n"
+                    ],
+                    [
+                        24,
+                        "  location              = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        25,
+                        "  tags = var.tags\n"
+                    ],
+                    [
+                        26,
+                        "  name                  = \"${var.project}-webserver-${var.vm.zone}\"\n"
+                    ],
+                    [
+                        27,
+                        "  network_interface_ids = [azurerm_network_interface.vmnic.id]\n"
+                    ],
+                    [
+                        28,
+                        "  resource_group_name   = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        29,
+                        "  size                  = var.vm.size\n"
+                    ],
+                    [
+                        30,
+                        "  computer_name = \"${var.project}-webserver-${var.vm.zone}\"\n"
+                    ],
+                    [
+                        31,
+                        "\n"
+                    ],
+                    [
+                        32,
+                        "  boot_diagnostics {\n"
+                    ],
+                    [
+                        33,
+                        "    storage_account_uri = azurerm_storage_account.storageacct.primary_blob_endpoint\n"
+                    ],
+                    [
+                        34,
+                        "  }\n"
+                    ],
+                    [
+                        35,
+                        "  os_disk {\n"
+                    ],
+                    [
+                        36,
+                        "    caching              = \"ReadWrite\"\n"
+                    ],
+                    [
+                        37,
+                        "    storage_account_type = \"Standard_LRS\"\n"
+                    ],
+                    [
+                        38,
+                        "    name = \"${var.project}-webserver-osdisk-amd\"\n"
+                    ],
+                    [
+                        39,
+                        "  }\n"
+                    ],
+                    [
+                        40,
+                        "  source_image_reference {\n"
+                    ],
+                    [
+                        41,
+                        "    publisher = var.vm.source_image_reference.publisher\n"
+                    ],
+                    [
+                        42,
+                        "    offer     = var.vm.source_image_reference.offer\n"
+                    ],
+                    [
+                        43,
+                        "    sku       =var.vm.source_image_reference.sku\n"
+                    ],
+                    [
+                        44,
+                        "    version   = var.vm.source_image_reference.version\n"
+                    ],
+                    [
+                        45,
+                        "  }\n"
+                    ],
+                    [
+                        46,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vm.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vm.tf",
+                "repo_file_path": "/deploy/modules/cda/vm.tf",
+                "file_line_range": [
+                    19,
+                    46
+                ],
+                "resource": "azurerm_linux_virtual_machine.vm",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.VMDisablePasswordAuthentication",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-azure-virtual-machine-does-not-enable-password-authentication",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "admin_password": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_key_vault_secret.vmpassword",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_109",
+                "bc_check_id": "BC_AZR_NETWORKING_33",
+                "check_name": "Ensure that key vault allows firewall rules settings",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "network_acls/[0]/default_action"
+                    ]
+                },
+                "code_block": [
+                    [
+                        1,
+                        "resource \"azurerm_key_vault\" \"keyvault\" {\n"
+                    ],
+                    [
+                        2,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        3,
+                        "  name                = \"${var.project}-kv\"\n"
+                    ],
+                    [
+                        4,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        5,
+                        "  sku_name            = \"standard\"\n"
+                    ],
+                    [
+                        6,
+                        "  tenant_id           = data.azurerm_subscription.sub.tenant_id\n"
+                    ],
+                    [
+                        7,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vmdeps.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                "repo_file_path": "/deploy/modules/cda/vmdeps.tf",
+                "file_line_range": [
+                    1,
+                    7
+                ],
+                "resource": "azurerm_key_vault.keyvault",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.KeyVaultEnablesFirewallRulesSettings",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-key-vault-allows-firewall-rules-settings",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_42",
+                "bc_check_id": "BC_AZR_GENERAL_11",
+                "check_name": "Ensure the key vault is recoverable",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "purge_protection_enabled",
+                        "soft_delete_enabled"
+                    ]
+                },
+                "code_block": [
+                    [
+                        1,
+                        "resource \"azurerm_key_vault\" \"keyvault\" {\n"
+                    ],
+                    [
+                        2,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        3,
+                        "  name                = \"${var.project}-kv\"\n"
+                    ],
+                    [
+                        4,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        5,
+                        "  sku_name            = \"standard\"\n"
+                    ],
+                    [
+                        6,
+                        "  tenant_id           = data.azurerm_subscription.sub.tenant_id\n"
+                    ],
+                    [
+                        7,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vmdeps.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                "repo_file_path": "/deploy/modules/cda/vmdeps.tf",
+                "file_line_range": [
+                    1,
+                    7
+                ],
+                "resource": "azurerm_key_vault.keyvault",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.KeyvaultRecoveryEnabled",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-the-key-vault-is-recoverable",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_110",
+                "bc_check_id": "BC_AZR_GENERAL_40",
+                "check_name": "Ensure that key vault enables purge protection",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "purge_protection_enabled"
+                    ]
+                },
+                "code_block": [
+                    [
+                        1,
+                        "resource \"azurerm_key_vault\" \"keyvault\" {\n"
+                    ],
+                    [
+                        2,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        3,
+                        "  name                = \"${var.project}-kv\"\n"
+                    ],
+                    [
+                        4,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        5,
+                        "  sku_name            = \"standard\"\n"
+                    ],
+                    [
+                        6,
+                        "  tenant_id           = data.azurerm_subscription.sub.tenant_id\n"
+                    ],
+                    [
+                        7,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vmdeps.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                "repo_file_path": "/deploy/modules/cda/vmdeps.tf",
+                "file_line_range": [
+                    1,
+                    7
+                ],
+                "resource": "azurerm_key_vault.keyvault",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.KeyVaultEnablesPurgeProtection",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-key-vault-enables-purge-protection",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_41",
+                "bc_check_id": "BC_AZR_SECRETS_1",
+                "check_name": "Ensure that the expiration date is set on all secrets",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "expiration_date"
+                    ]
+                },
+                "code_block": [
+                    [
+                        15,
+                        "resource \"azurerm_key_vault_secret\" \"vmpassword\" {\n"
+                    ],
+                    [
+                        16,
+                        "  key_vault_id = azurerm_key_vault.keyvault.id\n"
+                    ],
+                    [
+                        17,
+                        "  name         = \"vmpassword\"\n"
+                    ],
+                    [
+                        18,
+                        "  value        = random_password.vmpassword.result\n"
+                    ],
+                    [
+                        19,
+                        "  depends_on = [\n"
+                    ],
+                    [
+                        20,
+                        "  azurerm_key_vault_access_policy.vmaccespol]\n"
+                    ],
+                    [
+                        21,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vmdeps.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                "repo_file_path": "/deploy/modules/cda/vmdeps.tf",
+                "file_line_range": [
+                    15,
+                    21
+                ],
+                "resource": "azurerm_key_vault_secret.vmpassword",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.SecretExpirationDate",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/set-an-expiration-date-on-all-secrets",
+                "details": []
+            },
+            {
+                "check_id": "CKV_AZURE_114",
+                "bc_check_id": "BC_AZR_GENERAL_42",
+                "check_name": "Ensure that key vault secrets have \"content_type\" set",
+                "check_result": {
+                    "result": "FAILED",
+                    "evaluated_keys": [
+                        "content_type"
+                    ]
+                },
+                "code_block": [
+                    [
+                        15,
+                        "resource \"azurerm_key_vault_secret\" \"vmpassword\" {\n"
+                    ],
+                    [
+                        16,
+                        "  key_vault_id = azurerm_key_vault.keyvault.id\n"
+                    ],
+                    [
+                        17,
+                        "  name         = \"vmpassword\"\n"
+                    ],
+                    [
+                        18,
+                        "  value        = random_password.vmpassword.result\n"
+                    ],
+                    [
+                        19,
+                        "  depends_on = [\n"
+                    ],
+                    [
+                        20,
+                        "  azurerm_key_vault_access_policy.vmaccespol]\n"
+                    ],
+                    [
+                        21,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vmdeps.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vmdeps.tf",
+                "repo_file_path": "/deploy/modules/cda/vmdeps.tf",
+                "file_line_range": [
+                    15,
+                    21
+                ],
+                "resource": "azurerm_key_vault_secret.vmpassword",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.azure.SecretContentType",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-key-vault-secrets-have-content_type-set",
+                "details": []
+            },
+            {
+                "check_id": "CKV2_AZURE_18",
+                "bc_check_id": "BC_AZR_GENERAL_38",
+                "check_name": "Ensure that Storage Accounts use customer-managed key for encryption",
+                "check_result": {
+                    "result": "FAILED",
+                    "entity": {
+                        "azurerm_storage_account": {
+                            "storageacct": {
+                                "__end_line__": 23,
+                                "__start_line__": 12,
+                                "account_replication_type": [
+                                    "LRS"
+                                ],
+                                "account_tier": [
+                                    "Standard"
+                                ],
+                                "blob_properties": [
+                                    {
+                                        "versioning_enabled": [
+                                            true
+                                        ]
+                                    }
+                                ],
+                                "enable_https_traffic_only": [
+                                    true
+                                ],
+                                "location": [
+                                    "var.location"
+                                ],
+                                "name": [
+                                    "${var.project}${random_string.sastring.result}sa"
+                                ],
+                                "resource_group_name": [
+                                    "${var.project}-rg"
+                                ]
+                            }
+                        }
+                    },
+                    "evaluated_keys": [
+                        "resource_type",
+                        "key_vault_id"
+                    ]
+                },
+                "code_block": [
+                    [
+                        12,
+                        "resource \"azurerm_storage_account\" \"storageacct\" {\n"
+                    ],
+                    [
+                        13,
+                        "  account_replication_type = \"LRS\"\n"
+                    ],
+                    [
+                        14,
+                        "  account_tier             = \"Standard\"\n"
+                    ],
+                    [
+                        15,
+                        "  location                 = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        16,
+                        "  name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        17,
+                        "  #name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name      = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "  enable_https_traffic_only = true\n"
+                    ],
+                    [
+                        20,
+                        "  blob_properties {\n"
+                    ],
+                    [
+                        21,
+                        "    versioning_enabled = true\n"
+                    ],
+                    [
+                        22,
+                        "  }\n"
+                    ],
+                    [
+                        23,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    12,
+                    23
+                ],
+                "resource": "azurerm_storage_account.storageacct",
+                "evaluations": null,
+                "check_class": "checkov.common.graph.checks_infra.base_check",
+                "fixed_definition": null,
+                "entity_tags": {},
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-storage-accounts-use-customer-managed-key-for-encryption",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AZURE_119",
+                "bc_check_id": "BC_AZR_NETWORKING_36",
+                "check_name": "Ensure that Network Interfaces don't use public IPs",
+                "check_result": {
+                    "result": "FAILED",
+                    "entity": {
+                        "azurerm_network_interface": {
+                            "vmnic": {
+                                "__end_line__": 11,
+                                "__start_line__": 1,
+                                "ip_configuration": [
+                                    {
+                                        "name": [
+                                            "vm-nic"
+                                        ],
+                                        "private_ip_address_allocation": [
+                                            "Dynamic"
+                                        ],
+                                        "public_ip_address_id": [
+                                            "azurerm_public_ip.vmpip.id"
+                                        ],
+                                        "subnet_id": [
+                                            "azurerm_subnet.vmsubnet.id"
+                                        ]
+                                    }
+                                ],
+                                "location": [
+                                    "var.location"
+                                ],
+                                "name": [
+                                    "${var.project}-vm-nic"
+                                ],
+                                "resource_group_name": [
+                                    "${var.project}-rg"
+                                ]
+                            }
+                        }
+                    },
+                    "evaluated_keys": [
+                        "resource_type"
+                    ]
+                },
+                "code_block": [
+                    [
+                        1,
+                        "resource \"azurerm_network_interface\" \"vmnic\" {\n"
+                    ],
+                    [
+                        2,
+                        "  location            = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        3,
+                        "  name                = \"${var.project}-vm-nic\"\n"
+                    ],
+                    [
+                        4,
+                        "  resource_group_name = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        5,
+                        "  ip_configuration {\n"
+                    ],
+                    [
+                        6,
+                        "    name                          = \"vm-nic\"\n"
+                    ],
+                    [
+                        7,
+                        "    private_ip_address_allocation = \"Dynamic\"\n"
+                    ],
+                    [
+                        8,
+                        "    subnet_id = azurerm_subnet.vmsubnet.id\n"
+                    ],
+                    [
+                        9,
+                        "    public_ip_address_id = azurerm_public_ip.vmpip.id\n"
+                    ],
+                    [
+                        10,
+                        "  }\n"
+                    ],
+                    [
+                        11,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/vm.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/vm.tf",
+                "repo_file_path": "/deploy/modules/cda/vm.tf",
+                "file_line_range": [
+                    1,
+                    11
+                ],
+                "resource": "azurerm_network_interface.vmnic",
+                "evaluations": null,
+                "check_class": "checkov.common.graph.checks_infra.base_check",
+                "fixed_definition": null,
+                "entity_tags": {},
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-network-interfaces-dont-use-public-ips",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV2_AZURE_1",
+                "bc_check_id": "BC_AZR_GENERAL_32",
+                "check_name": "Ensure storage for critical data are encrypted with Customer Managed Key",
+                "check_result": {
+                    "result": "FAILED",
+                    "entity": {
+                        "azurerm_storage_account": {
+                            "storageacct": {
+                                "__end_line__": 23,
+                                "__start_line__": 12,
+                                "account_replication_type": [
+                                    "LRS"
+                                ],
+                                "account_tier": [
+                                    "Standard"
+                                ],
+                                "blob_properties": [
+                                    {
+                                        "versioning_enabled": [
+                                            true
+                                        ]
+                                    }
+                                ],
+                                "enable_https_traffic_only": [
+                                    true
+                                ],
+                                "location": [
+                                    "var.location"
+                                ],
+                                "name": [
+                                    "${var.project}${random_string.sastring.result}sa"
+                                ],
+                                "resource_group_name": [
+                                    "${var.project}-rg"
+                                ]
+                            }
+                        }
+                    },
+                    "evaluated_keys": [
+                        "resource_type"
+                    ]
+                },
+                "code_block": [
+                    [
+                        12,
+                        "resource \"azurerm_storage_account\" \"storageacct\" {\n"
+                    ],
+                    [
+                        13,
+                        "  account_replication_type = \"LRS\"\n"
+                    ],
+                    [
+                        14,
+                        "  account_tier             = \"Standard\"\n"
+                    ],
+                    [
+                        15,
+                        "  location                 = azurerm_resource_group.resourcegroup.location\n"
+                    ],
+                    [
+                        16,
+                        "  name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        17,
+                        "  #name                     = \"${var.project}${random_string.sastring.result}sa\"\n"
+                    ],
+                    [
+                        18,
+                        "  resource_group_name      = azurerm_resource_group.resourcegroup.name\n"
+                    ],
+                    [
+                        19,
+                        "  enable_https_traffic_only = true\n"
+                    ],
+                    [
+                        20,
+                        "  blob_properties {\n"
+                    ],
+                    [
+                        21,
+                        "    versioning_enabled = true\n"
+                    ],
+                    [
+                        22,
+                        "  }\n"
+                    ],
+                    [
+                        23,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    12,
+                    23
+                ],
+                "resource": "azurerm_storage_account.storageacct",
+                "evaluations": null,
+                "check_class": "checkov.common.graph.checks_infra.base_check",
+                "fixed_definition": null,
+                "entity_tags": {},
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-storage-for-critical-data-are-encrypted-with-customer-managed-key",
+                "details": [],
+                "breadcrumbs": {
+                    "location": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "resource_group_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_resource_group.resourcegroup",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/resourcegroup.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV2_AZURE_21",
+                "bc_check_id": "BC_AZR_LOGGING_11",
+                "check_name": "Ensure Storage logging is enabled for Blob service for read requests",
+                "check_result": {
+                    "result": "FAILED",
+                    "entity": {
+                        "azurerm_storage_container": {
+                            "scripts": {
+                                "__end_line__": 28,
+                                "__start_line__": 25,
+                                "name": [
+                                    "scripts"
+                                ],
+                                "storage_account_name": [
+                                    "${var.project}${random_string.sastring.result}sa"
+                                ]
+                            }
+                        }
+                    },
+                    "evaluated_keys": [
+                        "resource_type",
+                        "blob_container_names",
+                        "container_access_type"
+                    ]
+                },
+                "code_block": [
+                    [
+                        25,
+                        "resource \"azurerm_storage_container\" \"scripts\" {\n"
+                    ],
+                    [
+                        26,
+                        "  name                 = \"scripts\"\n"
+                    ],
+                    [
+                        27,
+                        "  storage_account_name = azurerm_storage_account.storageacct.name\n"
+                    ],
+                    [
+                        28,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/cda/storage.tf",
+                "file_abs_path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                "repo_file_path": "/deploy/modules/cda/storage.tf",
+                "file_line_range": [
+                    25,
+                    28
+                ],
+                "resource": "azurerm_storage_container.scripts",
+                "evaluations": null,
+                "check_class": "checkov.common.graph.checks_infra.base_check",
+                "fixed_definition": null,
+                "entity_tags": {},
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-storage-logging-is-enabled-for-blob-service-for-read-requests",
+                "details": [],
+                "breadcrumbs": {
+                    "storage_account_name": [
+                        {
+                            "type": "resource",
+                            "name": "azurerm_storage_account.storageacct",
+                            "path": "/devops/repo/onedrive/sp-cda/deploy/modules/cda/storage.tf",
+                            "module_connection": false
+                        }
+                    ]
+                }
+            }
+        ],
+        "skipped_checks": [],
+        "parsing_errors": []
+    },
+    "summary": {
+        "passed": 21,
+        "failed": 15,
+        "skipped": 0,
+        "parsing_errors": 0,
+        "resource_count": 21,
+        "checkov_version": "2.2.21"
+    },
+    "url": "Add an api key '--bc-api-key <api-key>' to see more detailed insights via https://bridgecrew.cloud"
+}

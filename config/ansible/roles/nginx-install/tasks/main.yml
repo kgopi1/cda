@@ -1,0 +1,6 @@
+---
+# tasks file for nginx-install
+- name: To install the nginx server
+  apt:
+    name: nginx
+    state: present

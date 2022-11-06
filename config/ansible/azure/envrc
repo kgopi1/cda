@@ -1,0 +1,8 @@
+# make sure you install direnv tool
+# rename this file to .envrc and run direnv allow
+# fill the azure details to run the azure authentication for azure dynamic inventory
+
+export AZURE_CLIENT_ID=""
+export AZURE_SECRET=""
+export AZURE_SUBSCRIPTION_ID=""
+export AZURE_TENANT=""
