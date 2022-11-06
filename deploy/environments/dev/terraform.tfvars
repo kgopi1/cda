@@ -4,8 +4,8 @@ location = "westeurope"
 
 vm = {
   admin_username = "cdaadmin"
-  size = "Standard_B2s"
-  zone = 1
+  size           = "Standard_B2s"
+  zone           = 1
   source_image_reference = {
     offer     = "0001-com-ubuntu-server-focal"
     publisher = "Canonical"

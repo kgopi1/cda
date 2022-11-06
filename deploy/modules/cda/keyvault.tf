@@ -32,7 +32,7 @@ resource "azurerm_key_vault_access_policy" "vmaccespol" {
     "List",
     "Backup", "Delete", "Get", "Purge", "Recover", "Restore", "Set"
   ]
-  key_permissions =  [ "Get", "List","Create","Update","Purge","Delete"]
+  key_permissions = ["Get", "List", "Create", "Update", "Purge", "Delete"]
 }
 
 resource "azurerm_key_vault_key" "diskkey" {

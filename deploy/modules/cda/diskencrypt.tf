@@ -10,10 +10,10 @@ resource "azurerm_virtual_machine_extension" "diskencrypt" {
   type_handler_version       = "1.1"
   auto_upgrade_minor_version = true
   depends_on = [
-  azurerm_linux_virtual_machine.vm,
-  azurerm_key_vault_key.diskkey
+    azurerm_linux_virtual_machine.vm,
+    azurerm_key_vault_key.diskkey
   ]
-  settings                   = <<SETTINGS
+  settings = <<SETTINGS
     {
 
         "EncryptionOperation": "EnableEncryption",
@@ -25,5 +25,5 @@ resource "azurerm_virtual_machine_extension" "diskencrypt" {
         "VolumeType": "All"
     }
 SETTINGS
-  tags                       = var.tags
+  tags     = var.tags
 }
