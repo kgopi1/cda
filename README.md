@@ -9,9 +9,9 @@ This project contains IaC for deploying and configuring the Virtual machine and 
 1. update the providers.tf, state.tf in deploy module.
 2. update .envrc file in the config ansible/azure module.
 
-# Stages
+## Stages
 
-## Deploy Stage: 
+### Deploy Stage: 
 
 In this stage , Virtual machine ,its dependencies and nginx webserver with simple webpage will be deployed using Terraform IaC . 
 
@@ -21,9 +21,9 @@ In this stage , Virtual machine ,its dependencies and nginx webserver with simpl
 > 
 > 2. Run Terraform init/plan/apply
 
-## Config Stage:
+### Config Stage:
 
-### Ansible:
+#### Ansible:
 
 Ansible Stage is to install /update applications running in the Virtual machine. 
 Ansible directory is split into 2 sections.
@@ -48,7 +48,7 @@ Ansible directory is split into 2 sections.
 >
 > 2. ansible-playbook -i azure_rm.py site.yaml --ask-pass
 
-### Iac Compliance tool:
+#### Iac Compliance tool:
 
 I used [**checkov**](https://www.checkov.io/1.Welcome/What%20is%20Checkov.html) static IaC analysis tool for getting compliance checks. 
 
