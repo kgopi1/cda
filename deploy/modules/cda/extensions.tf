@@ -7,7 +7,7 @@ resource "azurerm_virtual_machine_extension" "vminstallscript" {
   settings             = <<SETTINGS
     {
      "fileUris": [
-                "https://${random_string.sastring.result}${var.project}sa.blob.core.windows.net/scripts/nginx.sh"
+                "https://${var.project}${random_string.sastring.result}sa.blob.core.windows.net/scripts/nginx.sh"
                 ]
     }
 SETTINGS
