@@ -1,0 +1,8 @@
+---
+- name: To update the nginx config file
+  hosts: dev
+  remote_user: ansible
+  become: true
+  roles:
+    # - nginx-install
+    - nginx-update

@@ -1,0 +1,11 @@
+---
+# handlers file for nginx-update
+- name: start_nginx
+  service:
+    name: nginx
+    state: started
+
+- name: stop_nginx
+  service:
+    name: nginx
+    state: stopped

@@ -1,0 +1,9 @@
+---
+- name: Update the Nginx default page
+  copy:
+    src: files/index.html
+    dest: /var/www/html/index.html
+    backup: true
+  notify:
+    - stop_nginx
+    - start_nginx

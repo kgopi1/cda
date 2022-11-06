@@ -1,0 +1,9 @@
+## ansible-playbook -i azure_rm.py site.yaml --ask-pass
+---
+- name: To update the nginx config file
+  hosts: azure
+  remote_user: vmadmin
+  become: true
+  roles:
+    # - nginx-install
+    - nginx-update
